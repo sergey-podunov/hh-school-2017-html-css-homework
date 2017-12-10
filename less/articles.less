@@ -1,0 +1,84 @@
+@import "mixins";
+@articles-bg-color: #222222;
+@articles-icon-height: 62px;
+
+.articles {
+  margin-bottom: 140px;
+  justify-content: space-between;
+
+  &__item {
+    background-color: @articles-bg-color;
+    padding-left: 39px;
+    color: #fff;
+    width: 368px;
+    height: 368px;
+    margin-left: 16px;
+    margin-right: 16px;
+    .transition(top 0.2s);
+
+    &:hover {
+      background: @articles-bg-color url('../img/article-selector.png') no-repeat top center;
+    }
+  }
+
+  &__item-genre {
+    padding-top: 65px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  &__item-title {
+    padding-top: 35px;
+    padding-right: 60px;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  &__item-meta {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 52px;
+  }
+
+  &__item-meta-text {
+    float: right;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: @articles-icon-height;
+
+    &:after {
+      content: '';
+      clear: both;
+    }
+  }
+
+  &__item-author {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  &__item-date {
+    font-size: 14px;
+  }
+
+  &__item-author-icon {
+    float: left;
+    width: 62px;
+    height: @articles-icon-height;
+    background: @articles-bg-color url('../img/authors.png') no-repeat;
+  }
+
+  &__item-author-icon-jimmy {
+    background-position: 0 0;
+  }
+
+  &__item-author-icon-gail {
+    background-position: -62px 0;
+  }
+
+  &__item-author-icon-masson {
+    background-position: -124px 0;
+  }
+}
